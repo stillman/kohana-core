@@ -1182,6 +1182,46 @@ class Kohana_Request implements HTTP_Request {
 	}
 
 	/**
+	 * Returns whether this is an GET request
+	 *
+	 * @return  boolean
+	 */
+	public function is_get()
+	{
+		return $this->_method === 'GET';
+	}
+
+	/**
+	 * Returns whether this is an POST request
+	 *
+	 * @return  boolean
+	 */
+	public function is_post()
+	{
+		return $this->_method === 'POST';
+	}
+
+	/**
+	 * Returns whether this is an PUT request
+	 *
+	 * @return  boolean
+	 */
+	public function is_put()
+	{
+		return $this->_method === 'PUT';
+	}
+
+	/**
+	 * Returns whether this is an DELETE request
+	 *
+	 * @return  boolean
+	 */
+	public function is_delete()
+	{
+		return $this->_method === 'DELETE';
+	}
+
+	/**
 	 * Returns whether this is an ajax request (as used by JS frameworks)
 	 *
 	 * @return  boolean
